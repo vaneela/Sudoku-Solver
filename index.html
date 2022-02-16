@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sudoku solver</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Sudoku Solver</h1>
+    <table id = "tab">
+        <tr id = "one">
+            <td><input type="text" name="" id="" value="5"></td>
+            <td><input type="text" name="" id="" value="3"></td>
+            <td><input type="text" name="" id="" value="0"></td>
+            <td><input type="text" name="" id="" value="0"></td>
+            <td><input type="text" name="" id="" value="7"></td>
+            <td><input type="text" name="" id="" value="0"></td>
+            <td><input type="text" name="" id="" value="0"></td>
+            <td><input type="text" name="" id="" value="0"></td>
+            <td><input type="text" name="" id="" value="0"></td>
+        </tr>
+        <tr id = "two">
+            <td><input type="text" name="" id="" value="6"></td>
+            <td><input type="text" name="" id="" value="0"></td>
+            <td><input type="text" name="" id="" value="0"></td>
+            <td><input type="text" name="" id="" value="1"></td>
+            <td><input type="text" name="" id="" value="9"></td>
+            <td><input type="text" name="" id="" value="5"></td>
+            <td><input type="text" name="" id="" value="0"></td>
+            <td><input type="text" name="" id="" value="0"></td>
+            <td><input type="text" name="" id="" value="0"></td>
+        </tr>
+        <tr id = "three">
+            <td><input type="text" name="" id="" value="0"></td>
+            <td><input type="text" name="" id="" value="9"></td>
+            <td><input type="text" name="" id="" value="8"></td>
+            <td><input type="text" name="" id="" value="0"></td>
+            <td><input type="text" name="" id="" value="0"></td>
+            <td><input type="text" name="" id="" value="0"></td>
+            <td><input type="text" name="" id="" value="0"></td>
+            <td><input type="text" name="" id="" value="6"></td>
+            <td><input type="text" name="" id="" value="0"></td>
+        </tr>
+        <tr id = "four">
+            <td><input type="text" name="" id="" value="8"></td>
+            <td><input type="text" name="" id="" value="0"></td>
+            <td><input type="text" name="" id="" value="0"></td>
+            <td><input type="text" name="" id="" value="0"></td>
+            <td><input type="text" name="" id="" value="6"></td>
+            <td><input type="text" name="" id="" value="0"></td>
+            <td><input type="text" name="" id="" value="0"></td>
+            <td><input type="text" name="" id="" value="0"></td>
+            <td><input type="text" name="" id="" value="3"></td>
+        </tr>
+        <tr id = "five">
+            <td><input type="text" name="" id="" value="4"></td>
+            <td><input type="text" name="" id="" value="0"></td>
+            <td><input type="text" name="" id="" value="0"></td>
+            <td><input type="text" name="" id="" value="8"></td>
+            <td><input type="text" name="" id="" value="0"></td>
+            <td><input type="text" name="" id="" value="3"></td>
+            <td><input type="text" name="" id="" value="0"></td>
+            <td><input type="text" name="" id="" value="0"></td>
+            <td><input type="text" name="" id="" value="1"></td>
+        </tr>
+        <tr id = "six">
+            <td><input type="text" name="" id="" value="7"></td>
+            <td><input type="text" name="" id="" value="0"></td>
+            <td><input type="text" name="" id="" value="0"></td>
+            <td><input type="text" name="" id="" value="0"></td>
+            <td><input type="text" name="" id="" value="2"></td>
+            <td><input type="text" name="" id="" value="0"></td>
+            <td><input type="text" name="" id="" value="0"></td>
+            <td><input type="text" name="" id="" value="0"></td>
+            <td><input type="text" name="" id="" value="6"></td>
+        </tr>
+        <tr id = "seven">
+            <td><input type="text" name="" id="" value="0"></td>
+            <td><input type="text" name="" id="" value="6"></td>
+            <td><input type="text" name="" id="" value="0"></td>
+            <td><input type="text" name="" id="" value="0"></td>
+            <td><input type="text" name="" id="" value="0"></td>
+            <td><input type="text" name="" id="" value="0"></td>
+            <td><input type="text" name="" id="" value="2"></td>
+            <td><input type="text" name="" id="" value="8"></td>
+            <td><input type="text" name="" id="" value="0"></td>
+        </tr>
+        <tr id = "eight">
+            <td><input type="text" name="" id="" value="0"></td>
+            <td><input type="text" name="" id="" value="0"></td>
+            <td><input type="text" name="" id="" value="0"></td>
+            <td><input type="text" name="" id="" value="4"></td>
+            <td><input type="text" name="" id="" value="1"></td>
+            <td><input type="text" name="" id="" value="9"></td>
+            <td><input type="text" name="" id="" value="0"></td>
+            <td><input type="text" name="" id="" value="0"></td>
+            <td><input type="text" name="" id="" value="5"></td>
+        </tr>
+        <tr id = "nine">
+            <td><input type="text" name="" id="" value="0"></td>
+            <td><input type="text" name="" id="" value="0"></td>
+            <td><input type="text" name="" id="" value="0"></td>
+            <td><input type="text" name="" id="" value="0"></td>
+            <td><input type="text" name="" id="" value="8"></td>
+            <td><input type="text" name="" id="" value="0"></td>
+            <td><input type="text" name="" id="" value="0"></td>
+            <td><input type="text" name="" id="" value="7"></td>
+            <td><input type="text" name="" id="" value="9"></td>
+        </tr>
+        
+
+    </table>
+
+    <table id = "tab1" style="display: none;">
+        <tr id = "one-2">
+            <td><input type="text" name="" id="" value="5"></td>
+            <td><input type="text" name="" id="" value="3"></td>
+            <td><input type="text" name="" id="" value="0"></td>
+            <td><input type="text" name="" id="" value="0"></td>
+            <td><input type="text" name="" id="" value="7"></td>
+            <td><input type="text" name="" id="" value="0"></td>
+            <td><input type="text" name="" id="" value="0"></td>
+            <td><input type="text" name="" id="" value="0"></td>
+            <td><input type="text" name="" id="" value="0"></td>
+        </tr>
+        <tr id = "two-2">
+            <td><input type="text" name="" id="" value="6"></td>
+            <td><input type="text" name="" id="" value="0"></td>
+            <td><input type="text" name="" id="" value="0"></td>
+            <td><input type="text" name="" id="" value="1"></td>
+            <td><input type="text" name="" id="" value="9"></td>
+            <td><input type="text" name="" id="" value="5"></td>
+            <td><input type="text" name="" id="" value="0"></td>
+            <td><input type="text" name="" id="" value="0"></td>
+            <td><input type="text" name="" id="" value="0"></td>
+        </tr>
+        <tr id = "three-2">
+            <td><input type="text" name="" id="" value="0"></td>
+            <td><input type="text" name="" id="" value="9"></td>
+            <td><input type="text" name="" id="" value="8"></td>
+            <td><input type="text" name="" id="" value="0"></td>
+            <td><input type="text" name="" id="" value="0"></td>
+            <td><input type="text" name="" id="" value="0"></td>
+            <td><input type="text" name="" id="" value="0"></td>
+            <td><input type="text" name="" id="" value="6"></td>
+            <td><input type="text" name="" id="" value="0"></td>
+        </tr>
+        <tr id = "four-2">
+            <td><input type="text" name="" id="" value="8"></td>
+            <td><input type="text" name="" id="" value="0"></td>
+            <td><input type="text" name="" id="" value="0"></td>
+            <td><input type="text" name="" id="" value="0"></td>
+            <td><input type="text" name="" id="" value="6"></td>
+            <td><input type="text" name="" id="" value="0"></td>
+            <td><input type="text" name="" id="" value="0"></td>
+            <td><input type="text" name="" id="" value="0"></td>
+            <td><input type="text" name="" id="" value="3"></td>
+        </tr>
+        <tr id = "five-2">
+            <td><input type="text" name="" id="" value="4"></td>
+            <td><input type="text" name="" id="" value="0"></td>
+            <td><input type="text" name="" id="" value="0"></td>
+            <td><input type="text" name="" id="" value="8"></td>
+            <td><input type="text" name="" id="" value="0"></td>
+            <td><input type="text" name="" id="" value="3"></td>
+            <td><input type="text" name="" id="" value="0"></td>
+            <td><input type="text" name="" id="" value="0"></td>
+            <td><input type="text" name="" id="" value="1"></td>
+        </tr>
+        <tr id = "six-2">
+            <td><input type="text" name="" id="" value="7"></td>
+            <td><input type="text" name="" id="" value="0"></td>
+            <td><input type="text" name="" id="" value="0"></td>
+            <td><input type="text" name="" id="" value="0"></td>
+            <td><input type="text" name="" id="" value="2"></td>
+            <td><input type="text" name="" id="" value="0"></td>
+            <td><input type="text" name="" id="" value="0"></td>
+            <td><input type="text" name="" id="" value="0"></td>
+            <td><input type="text" name="" id="" value="6"></td>
+        </tr>
+        <tr id = "seven-2">
+            <td><input type="text" name="" id="" value="0"></td>
+            <td><input type="text" name="" id="" value="6"></td>
+            <td><input type="text" name="" id="" value="0"></td>
+            <td><input type="text" name="" id="" value="0"></td>
+            <td><input type="text" name="" id="" value="0"></td>
+            <td><input type="text" name="" id="" value="0"></td>
+            <td><input type="text" name="" id="" value="2"></td>
+            <td><input type="text" name="" id="" value="8"></td>
+            <td><input type="text" name="" id="" value="0"></td>
+        </tr>
+        <tr id = "eight-2">
+            <td><input type="text" name="" id="" value="0"></td>
+            <td><input type="text" name="" id="" value="0"></td>
+            <td><input type="text" name="" id="" value="0"></td>
+            <td><input type="text" name="" id="" value="4"></td>
+            <td><input type="text" name="" id="" value="1"></td>
+            <td><input type="text" name="" id="" value="9"></td>
+            <td><input type="text" name="" id="" value="0"></td>
+            <td><input type="text" name="" id="" value="0"></td>
+            <td><input type="text" name="" id="" value="5"></td>
+        </tr>
+        <tr id = "nine-2">
+            <td><input type="text" name="" id="" value="0"></td>
+            <td><input type="text" name="" id="" value="0"></td>
+            <td><input type="text" name="" id="" value="0"></td>
+            <td><input type="text" name="" id="" value="0"></td>
+            <td><input type="text" name="" id="" value="8"></td>
+            <td><input type="text" name="" id="" value="0"></td>
+            <td><input type="text" name="" id="" value="0"></td>
+            <td><input type="text" name="" id="" value="7"></td>
+            <td><input type="text" name="" id="" value="9"></td>
+        </tr>
+        
+
+    </table>
+    <div class="btn-container">
+        
+    <button class="btn" onclick="sudoku()">Click Me for answers</button>
+    <button class="btn" onclick="location.reload(true)">Click Me to Reload The Page</button>
+    <button class="btn" onclick="callMeToReset()">Click Me to reset</button>
+    <script src="app.js"></script>
+    </div>
+</body>
+</html>
